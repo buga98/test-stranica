@@ -15,10 +15,18 @@
       <span class="logo-text">Studio</span>
       <span class="logo-highlight">3D</span>
     </a>
+
+    <!-- Hamburger dugme -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-  <nav class="navbar">
-    <a href="index.html">Početna</a>
-    <a href="projekti.html" class="active">Projekti</a>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="active">Početna</a>
+    <a href="projekti.php">Projekti</a>
     <a href="onama.html">O nama</a>
     <a href="usluge.html">Usluge</a>
     <a href="kontakt.html">Kontakt</a>
@@ -92,5 +100,15 @@
     <p>&copy; 2025 3D Design Studio | Dizajn nije samo ono što vidite, već ono što osjećate u prostoru.</p>
   </div>
 </footer>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>

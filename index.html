@@ -16,8 +16,16 @@
       <span class="logo-text">Studio</span>
       <span class="logo-highlight">3D</span>
     </a>
+
+    <!-- Hamburger dugme -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-  <nav class="navbar">
+
+  <nav class="navbar" id="navbar">
     <a href="index.html" class="active">Početna</a>
     <a href="projekti.php">Projekti</a>
     <a href="onama.html">O nama</a>
@@ -25,6 +33,7 @@
     <a href="kontakt.html">Kontakt</a>
   </nav>
 </header>
+
 
 <script>
   // Automatski doda 'active' klasu linku u meniju
@@ -311,5 +320,15 @@ const observer = new IntersectionObserver(entries => {
 scrollElems.forEach(el => observer.observe(el));
 
   </script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
