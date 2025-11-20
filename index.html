@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naslovna | 3D Design Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigacija -->
+<header>
+  <div class="logo-container">
+    <a href="index.html" class="logo-link">
+      <img src="img/3dstudiotransparent-bijela.png" alt="3D Studio Logo" class="logo">
+      <span class="logo-text">Studio</span>
+      <span class="logo-highlight">3D</span>
+    </a>
+  </div>
+  <nav class="navbar">
+    <a href="index.html" class="active">Početna</a>
+    <a href="projekti.php">Projekti</a>
+    <a href="onama.html">O nama</a>
+    <a href="usluge.html">Usluge</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<script>
+  // Automatski doda 'active' klasu linku u meniju
+  const currentLocation = window.location.pathname.split("/").pop();
+  const menuItems = document.querySelectorAll(".navbar a");
+
+  menuItems.forEach(item => {
+    if (item.getAttribute("href") === currentLocation) {
+      item.classList.add("active");
+    }
+  });
+</script>
+
+
+  <!-- Hero sekcija -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Vaša vizija. Naš dizajn.</h1>
+      <p>3D vizualizacija koja postaje stvarnost</p>
+    </div>
+  </section>
+
+
+<section class="home-services cards">
+  <h2>Naše usluge</h2>
+  <div class="card-container">
+
+    <!-- Dizajn interijera -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-couch fa-2x"></i>
+          <h3>Dizajn interijera</h3>
+          <p>Kreiramo luksuzne i funkcionalne interijere prilagođene vašem stilu i potrebama.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/dizajn-interijera.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D vizualizacije -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-cube fa-2x"></i>
+          <h3>3D vizualizacije</h3>
+          <p>Pružamo fotorealistične prikaze vašeg prostora prije same realizacije.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/3d-vizualizacije.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Konzultacije -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-comments fa-2x"></i>
+          <h3>Konzultacije</h3>
+          <p>Savjetujemo vas pri izboru boja, materijala i rasporeda prostora.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/konzultacije-koncepti.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inovativna rješenja -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-lightbulb fa-2x"></i>
+          <h3>Inovativna rješenja</h3>
+          <p>Primjena najnovijih trendova i tehnologija za kreiranje funkcionalnih i modernih prostora.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/inovativna-rjesenja.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planiranje prostora -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-pen-ruler fa-2x"></i>
+          <h3>Planiranje prostora</h3>
+          <p>Detaljno planiranje rasporeda, rasvjete i materijala za optimalno iskustvo prostora.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/planiranje-prostora.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Render projekata -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="fas fa-project-diagram fa-2x"></i>
+          <h3>Render projekata</h3>
+          <p>Priprema vizualno impresivnih rendera za prezentacije, natječaje ili marketing.</p>
+        </div>
+        <div class="card-back" style="background-image: url('img/xxx.jpg');">
+          <div class="overlay">
+            <a href="usluge/render-projekata.html" class="btn">Saznajte više..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- Quote -->
+  <section class="quote">
+    <p>"Prostor nije samo mjesto – on je iskustvo."</p>
+  </section>
+
+  <!-- Slider -->
+<section class="slider">
+  <h2>Galerija projekata</h2>
+  <div class="slider-container">
+    <div class="slides-wrapper">
+      <div class="slide">
+        <a href="galerija.html?sekcija=dnevni-boravak">
+          <div class="slide-image">
+            <img src="img/slika1.jpg" alt="Dnevni boravak">
+            <div class="slide-text">Dnevni boravak</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=kupaonica">
+          <div class="slide-image">
+            <img src="img/slika2.jpg" alt="Kupaonica">
+            <div class="slide-text">Kupaonica</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=blagovaonica">
+          <div class="slide-image">
+            <img src="img/slika3.jpg" alt="Blagovaonica">
+            <div class="slide-text">Blagovaonica</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=spavaca-soba">
+          <div class="slide-image">
+            <img src="img/slika4.jpg" alt="Spavaća soba">
+            <div class="slide-text">Spavaća soba</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=kuhinja">
+          <div class="slide-image">
+            <img src="img/slika5.jpg" alt="Kuhinja">
+            <div class="slide-text">Kuhinja</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=radna-soba">
+          <div class="slide-image">
+            <img src="img/slika6.jpg" alt="Radna soba">
+            <div class="slide-text">Radna soba</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=hodnik">
+          <div class="slide-image">
+            <img src="img/slika7.jpg" alt="Hodnik">
+            <div class="slide-text">Hodnik</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=balkon">
+          <div class="slide-image">
+            <img src="img/slika8.jpg" alt="Balkon / terasa">
+            <div class="slide-text">Balkon / terasa</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=garaza">
+          <div class="slide-image">
+            <img src="img/slika9.jpg" alt="Garaža / tehnički prostor">
+            <div class="slide-text">Garaža / tehnički prostor</div>
+          </div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="galerija.html?sekcija=vrt">
+          <div class="slide-image">
+            <img src="img/slika10.jpg" alt="Vrt / eksterijer">
+            <div class="slide-text">Vrt / eksterijer</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Strelice -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+</section>
+
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Spremni za suradnju?</h2>
+    <p>Povežite se s nama i pretvorimo vašu viziju u stvarnost.</p>
+    <a href="kontakt.html" class="btn">Kontaktirajte nas</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Tel: 0911231234</p>
+        <p>Email: lana@gmail.com</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Brzi linkovi</h3>
+        <ul>
+          <li><a href="index.html" class="active">Početna</a></li>
+          <li><a href="projekti.php">Projekti</a></li>
+          <li><a href="onama.html">O nama</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Posjetite nas!</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy;  Studio  3D| Dizajn nije samo ono što vidite, već ono što osjećate u prostoru.</p>
+    </div>
+  </footer>
+
+  <!-- Slider skripta -->
+  <script src="slider.js">
+    // Animacija elemenata pri scrollanju
+const scrollElems = document.querySelectorAll('.scroll-animate');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+scrollElems.forEach(el => observer.observe(el));
+
+  </script>
+</body>
+</html>

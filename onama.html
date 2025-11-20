@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nama | 3D Design Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <a href="index.html" class="logo-link">
+      <img src="img/3dstudiotransparent-bijela.png" alt="3D Studio Logo" class="logo">
+      <span class="logo-text">Studio</span>
+      <span class="logo-highlight">3D</span>
+    </a>
+  </div>
+    <nav class="navbar">
+      <a href="index.html" >Početna</a>
+      <a href="projekti.php">Projekti</a>
+      <a href="onama.html" class="active">O nama</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+<!-- HERO -->
+<section class="hero1">
+  <div class="hero1-overlay">
+    <h1>O nama</h1>
+    <p>Gdje mašta susreće preciznost.</p>
+  </div>
+</section>
+
+  <section class="about-section">
+  <div class="about-container left-text">
+    <div class="about-text">
+      <h2>Naša vizija</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <section class="rotating-words-section">
+  <div class="rotating-words-wrapper">
+    <span class="word">Dizajn interijera</span>
+    <span class="dot">•</span>
+    <span class="word">3D vizualizacija</span>
+    <span class="dot">•</span>
+    <span class="word">Konzultacije</span>
+    <span class="dot">•</span>
+    <span class="word">Inovativna rješenja</span>
+    <span class="dot">•</span>
+    <span class="word">Planiranje prostora</span>
+    <span class="dot">•</span>
+    <span class="word">Render projekata</span>
+    <span class="dot">•</span>
+  </div>
+</section>
+
+    <div class="about-image">
+      <img src="img/slika1.jpg" alt="Naša vizija">
+    </div>
+  </div>
+
+  <div class="about-container right-text">
+    <div class="about-text">
+      <h2>Naš tim</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="img/slika5.jpg" alt="Naš tim">
+    </div>
+  </div>
+
+  <div class="about-container left-text">
+    <div class="about-text">
+      <h2>Proces rada</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="img/slika7.jpg" alt="Proces rada">
+    </div>
+  </div>
+
+  <div class="about-container right-text">
+    <div class="about-text">
+      <h2>Naša filozofija</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="img/slika10.jpg" alt="Naša filozofija">
+    </div>
+  </div>
+</section>
+<script>
+ gsap.utils.toArray('.about-container').forEach((section, i) => {
+  let direction = (i % 2 === 0) ? -200 : 200; // veći offset za fluidniji ulaz
+
+  gsap.fromTo(section, 
+    {x: direction, opacity: 0}, 
+    {
+      x: 0, 
+      opacity: 1, 
+      duration: 1.5, 
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 90%",
+        end: "center center",
+        scrub: 1.2, // prati scroll, tekući efekt
+      }
+    }
+  );
+
+  // Slika paralaks
+  let image = section.querySelector('.about-image');
+  if(image){
+    gsap.fromTo(image, 
+      {y: 100, opacity: 0}, 
+      {
+        y: 0, 
+        opacity: 1, 
+        duration: 2, 
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "center center",
+          scrub: true
+        }
+      }
+    );
+  }
+
+  // Tekst lagani fade
+  let text = section.querySelector('.about-text');
+  if(text){
+    gsap.fromTo(text, 
+      {y: 50, opacity: 0}, 
+      {
+        y: 0, 
+        opacity: 1, 
+        duration: 1.5, 
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "center center",
+          scrub: true
+        }
+      }
+    );
+  }
+});
+
+</script>
+</body>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Kontakt</h3>
+      <p>Tel: 0911231234</p>
+      <p>Email: lana@gmail.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Brzi linkovi</h3>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="projekti.php">Projekti</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Posjetite nas!</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 3D Design Studio | Dizajn nije samo ono što vidite, već ono što osjećate u prostoru.</p>
+  </div>
+</footer>
+
+</html>

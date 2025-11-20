@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija | 3D Design Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+  <div class="logo-container">
+    <a href="index.html" class="logo-link">
+      <img src="img/3dstudiotransparent-bijela.png" alt="3D Studio Logo" class="logo">
+      <span class="logo-text">Studio</span>
+      <span class="logo-highlight">3D</span>
+    </a>
+  </div>
+    <nav class="navbar">
+      <a href="index.html">Početna</a>
+      <a href="projekti.php">Projekti</a>
+      <a href="onama.html">O nama</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero1">
+    <div class="hero1-overlay">
+      <h1 id="gallery-title">Galerija</h1>
+      <p>Pogledajte naše projekte</p>
+    </div>
+  </section>
+
+  <!-- GALERIJA -->
+  <section class="gallery">
+    <div class="gallery-container" id="gallery-container">
+      <!-- Ovdje će JS ubaciti slike -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Tel: 0911231234</p>
+        <p>Email: lana@gmail.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Brzi linkovi</h3>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="projekti.php">Projekti</a></li>
+          <li><a href="onama.html">O nama</a></li>
+          <li><a href="usluge.html">Usluge</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Posjetite nas!</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 3D Design Studio | Dizajn nije samo ono što vidite, već ono što osjećate u prostoru.</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- DOHVATI PARAMETAR IZ URL-a ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const sekcija = urlParams.get("sekcija");
+
+    // --- NASLOV ---
+    const title = document.getElementById("gallery-title");
+    if (sekcija) {
+      title.textContent = sekcija.replace("-", " ").toUpperCase();
+    }
+
+    // --- KONTEJNER ZA SLIKE ---
+    const galleryContainer = document.getElementById("gallery-container");
+
+    // --- MAPA SEKCIJA I BROJ SLIKA ---
+    const galerije = {
+      "dnevni-boravak": 5,
+      "kupaonica": 4,
+      "blagovaonica": 3,
+      "spavaca-soba": 6,
+      "kuhinja": 5,
+      "radna-soba": 3,
+      "hodnik": 2,
+      "balkon": 3,
+      "garaza": 2,
+      "vrt": 4
+    };
+
+    // --- GENERIRAJ SLIKE ---
+    if (sekcija && galerije[sekcija]) {
+      const brojSlika = galerije[sekcija];
+      for (let i = 1; i <= brojSlika; i++) {
+        const img = document.createElement("img");
+        img.src = `img/${sekcija}/${i}.jpg`; // slike imenovane 1.jpg, 2.jpg ...
+        img.alt = `${sekcija} ${i}`;
+        img.classList.add("gallery-img");
+        galleryContainer.appendChild(img);
+      }
+    } else {
+      galleryContainer.innerHTML = "<p>Nema pronađenih slika za ovu sekciju.</p>";
+    }
+  </script>
+</body>
+</html>

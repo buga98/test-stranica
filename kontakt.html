@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | 3D Design Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+  <div class="logo-container">
+    <a href="index.html" class="logo-link">
+      <img src="img/3dstudiotransparent-bijela.png" alt="3D Studio Logo" class="logo">
+      <span class="logo-text">Studio</span>
+      <span class="logo-highlight">3D</span>
+    </a>
+  </div>
+    <nav class="navbar">
+      <a href="index.html">Početna</a>
+      <a href="projekti.PHP">Projekti</a>
+      <a href="onama.html">O nama</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+  </header>
+<!-- HERO -->
+<section class="hero1">
+  <div class="hero1-overlay">
+    <h1>Kontakt</h1>
+    <p>Dizajniramo budućnost, projekt po projekt</p>
+  </div>
+</section>
+  <section class="contact">
+    <h1>Kontakt</h1>
+<form action="send_mail.php" method="POST">
+  <div class="form-group">
+    <i class="fas fa-user"></i>
+    <input type="text" name="name" placeholder="Ime i prezime" required>
+  </div>
+  <div class="form-group">
+    <i class="fas fa-envelope"></i>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <i class="fas fa-comment"></i>
+    <textarea name="message" placeholder="Vaša poruka" required></textarea>
+  </div>
+  <button type="submit"><i class="fas fa-paper-plane"></i> Pošalji</button>
+</form>
+
+
+    <div class="info">
+      <p><i class="fas fa-envelope"></i> info@3ddesignstudio.hr</p>
+      <p><i class="fas fa-phone"></i> +385 99 123 4567</p>
+      <p><i class="fas fa-map-marker-alt"></i> Koprivnica, Hrvatska</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Tel: 0911231234</p>
+        <p>Email: lana@gmail.com</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Brzi linkovi</h3>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="projekti.php">Projekti</a></li>
+          <li><a href="onama.html">O nama</a></li>
+          <li><a href="usluge.html">Usluge</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Posjetite nas!</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 3D Design Studio | Dizajn nije samo ono što vidite, već ono što osjećate u prostoru.</p>
+    </div>
+  </footer>
+</body>
+</html>
